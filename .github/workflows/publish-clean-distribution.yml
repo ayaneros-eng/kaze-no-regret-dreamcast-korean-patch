@@ -1,0 +1,46 @@
+name: Publish reviewed distribution and retire legacy refs
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: reviewed-distribution-migration
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event.head_commit.message == 'Publish source-dependent v1.5 distribution and retire legacy history'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Verify and stage the locally reviewed source allowlist
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, subprocess, zipfile
+          archive=Path('reviewed-v1.5-staging.zip')
+          expected=Path('reviewed-v1.5-staging.sha256').read_text().split()[0]
+          assert hashlib.sha256(archive.read_bytes()).hexdigest()==expected
+          with zipfile.ZipFile(archive) as z:
+              assert z.testzip() is None
+              manifest=json.loads(z.read('REVIEWED-MANIFEST.json'))
+              assert len(z.namelist())==len(set(z.namelist()))
+              assert set(z.namelist())=={x['path'] for x in manifest}|{'REVIEWED-MANIFEST.json'}
+              paths=[]
+              for item in manifest:
+                  name=item['path'];p=Path(name)
+                  assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts
+                  assert p.suffix.lower() not in {'.chd','.gdi','.cue','.bin','.raw','.iso','.cdi','.bps'}
+                  data=z.read(name)
+                  assert len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256']
+                  assert data[:8]!=b'MComprHD'
+                  p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data);paths.append(name)
+          subprocess.run(['git','rm','-r','--cached','.'],check=True)
+          subprocess.run(['git','add','--force','--',*paths],check=True)
+          PY
+      - name: Publish verified packages and replace legacy history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 publish_reviewed.py

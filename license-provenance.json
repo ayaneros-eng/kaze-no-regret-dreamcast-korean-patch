@@ -1,0 +1,128 @@
+{
+  "chdman_version": "0.251 (mame0251)",
+  "chdman_sha256": "972cad9fc243ba8d393cd9bfe566af0740e9df543b628b076b99fe77b8d24d20",
+  "official_binary_url": "https://github.com/mamedev/mame/releases/download/mame0251/mame0251b_64bit.exe",
+  "official_binary_archive_sha256": "eed0acd0a40e11ceed2cb1fb296b49579252c77b8d4d3956e56f4c805dbc258a",
+  "official_source_url": "https://github.com/mamedev/mame/releases/download/mame0251/mame0251s.exe",
+  "official_source_archive_sha256": "0330bbf23e8282c8596007f461c0806d70ee4c6b30005924d094b7e0c4823aa6",
+  "official_binary_chdman_exact_match": true,
+  "source_notice_files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "b3a51a68c70792aca117f420bbdd2042e6e4654736a491f64da7b365b0377fc0"
+    },
+    {
+      "path": "RIGHTS.md",
+      "bytes": 2100,
+      "sha256": "fe9d25b843e511104c65a788b24654159af866b9c068dc073730e5d88113d1f7"
+    },
+    {
+      "path": "OFL-NotoSansKR.txt",
+      "bytes": 4481,
+      "sha256": "e35ffdebb2225b49814c31889cbb3ce69cb3509e6a9f431edaba5e1a6de8cd15"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 2917,
+      "sha256": "b28f0161a0f854a0b8309a598f9f23459533f2a77069df0c6d161d13351a5a95"
+    },
+    {
+      "path": "MAME 0.251 / COPYING",
+      "bytes": 11678,
+      "sha256": "a9ee2f7071f04174852fb64279c306a10b94d378dd66b315ce7f201732cafdde"
+    },
+    {
+      "path": "docs/legal/BSD-2-Clause",
+      "bytes": 1307,
+      "sha256": "3b50c5c18a9c5557618a30c1cfe7e70cd3dfa9227ec8f14df54f200bbbe1132e"
+    },
+    {
+      "path": "docs/legal/BSD-3-Clause",
+      "bytes": 1509,
+      "sha256": "13f9eb8c17572e626c11e2c5523594907973a4ecf3ab73030345879eef894775"
+    },
+    {
+      "path": "docs/legal/BSL-1.0",
+      "bytes": 1304,
+      "sha256": "fbbd4ec0e2c5878ab05acc0248454537c3ea6e790d057cafc5558d4fab2a25af"
+    },
+    {
+      "path": "docs/legal/CC0",
+      "bytes": 6762,
+      "sha256": "daa216b67f1f917d3d0f69c93d8b191e848a1cd10694b723ab61eab72d3ae9fd"
+    },
+    {
+      "path": "docs/legal/GPL-2.0",
+      "bytes": 18299,
+      "sha256": "451337b1aa550e4dd838535c514a5e06f6a936887a3e7e7239e0d65a35a2772a"
+    },
+    {
+      "path": "docs/legal/LGPL-2.1",
+      "bytes": 26932,
+      "sha256": "9c430893db6b214c0c2d207fe7da097a0a3b036b0172010f25e01fd5774583ea"
+    },
+    {
+      "path": "docs/legal/MIT",
+      "bytes": 1080,
+      "sha256": "09fa29fbc395300ae6bcdd61be1a8d2995c2aa76214b25e96d95941d8270ae4c"
+    },
+    {
+      "path": "docs/legal/Zlib",
+      "bytes": 919,
+      "sha256": "f3afb7c6441a05344d39c56738bf933ad5696ce815611c6d32fd94229d7e0116"
+    },
+    {
+      "path": "3rdparty/expat/AUTHORS",
+      "bytes": 152,
+      "sha256": "7ff7fdc3dfc913c8daea4576c59381a8d17d112201ae3117a59c18f1bfd41c8e"
+    },
+    {
+      "path": "3rdparty/expat/COPYING",
+      "bytes": 1165,
+      "sha256": "f3020a8defa384bbd757196840c7df705102ba741788e2b8cd9b06ed04c2e852"
+    },
+    {
+      "path": "3rdparty/libflac/AUTHORS",
+      "bytes": 1681,
+      "sha256": "86e06da9f2033f208744e44cbb9cb5ee723002c09484c9e69cc2d1266cde996f"
+    },
+    {
+      "path": "3rdparty/libflac/COPYING.FDL",
+      "bytes": 20800,
+      "sha256": "62edd92e5ed2ce1f05ad436323f8c157541d8a6557e800f4e8ecc95aac23c22b"
+    },
+    {
+      "path": "3rdparty/libflac/COPYING.GPL",
+      "bytes": 18325,
+      "sha256": "a9ee4c67fc19db87cac2731182000e06a4e92d391be3d1332ddcec8486966573"
+    },
+    {
+      "path": "3rdparty/libflac/COPYING.LGPL",
+      "bytes": 26940,
+      "sha256": "319daefe38ebeead3df178e5937898a52d67c0c795f54f1c0bb10ac3b9cffb63"
+    },
+    {
+      "path": "3rdparty/libflac/COPYING.Xiph",
+      "bytes": 1522,
+      "sha256": "349b7bdbf2de10e1303fc3e8aa81f944fd2832fe40270e1b805e20b1b131187c"
+    },
+    {
+      "path": "3rdparty/libflac/doc/html/license.html",
+      "bytes": 5882,
+      "sha256": "5cb8a3ce49b73147e467ae00a08580a49030e733824e82a28b401ce9bc5ead42"
+    },
+    {
+      "path": "3rdparty/libflac/doc/html/ru/authors.html",
+      "bytes": 3509,
+      "sha256": "073d19a674fce8277d87054df0c0dfa3854d66d6c825480834b7423f9d855e4c",
+      "notice_decoding": "latin-1"
+    },
+    {
+      "path": "3rdparty/utf8proc/LICENSE.md",
+      "bytes": 5218,
+      "sha256": "c78c127f6a1ffb0b433ea165a5a3f929a4f5abe92ff00516cba2e357668d7920"
+    }
+  ],
+  "source_header_count": 813
+}

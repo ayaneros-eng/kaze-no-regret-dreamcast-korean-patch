@@ -1,0 +1,161 @@
+{
+  "version": "v1.5.0",
+  "editor_version": "1.0.1",
+  "date": "2026-10-21",
+  "game_content_unchanged_from": "v1.4.0",
+  "format": "KZRP2",
+  "runtime_replay_scope": "No new emulator replay; complete output CHD hashes equal the prior runtime-validated build. Packaging and license UI changed.",
+  "discs": [
+    {
+      "disc": 1,
+      "format": "KZRP2",
+      "source_track_sha256": "2cc813a900f74748d607b7c07756b608bceef60178d3f5b8bc2243edebcaf7f3",
+      "target_track_sha256": "49101951c44ce037c62154167f855c2d9a70d8e9ce9bc56b03d603db5b26dcd1",
+      "source_crc32": "1e5ec99f",
+      "target_crc32": "f9264f56",
+      "patch_sha256": "8a4a57a5a502aa7885b925071725dc5d022e7993373dbfd4d3fe0df285220125",
+      "patch_bytes": 951333,
+      "original_executable_lba": 548662,
+      "target_executable_lba": 45040,
+      "original_executable_bytes": 691232,
+      "target_executable_bytes": 1186560,
+      "copy_bytes": 667936,
+      "xor_source_bytes": 3342336,
+      "xor_nonzero_bytes": 2251138,
+      "new_extension_literal_bytes": 495328,
+      "sectors": 2200,
+      "independent_verification": {
+        "verified": true,
+        "independently_decoded_sectors": 2200,
+        "unchanged_raw_sectors": 501950,
+        "original_program_bytes_sourced_locally": 691232,
+        "literal_bytes_only_in_new_extension": 495328,
+        "original_program_literal_bytes": 0,
+        "original_ui_literal_bytes": 0,
+        "target_track_sha256": "49101951c44ce037c62154167f855c2d9a70d8e9ce9bc56b03d603db5b26dcd1"
+      },
+      "original_chd_sha256": "50e1dcea319ab451b73055ccc6f721c861e69b0d71b58f30b7e443c57cf4a0d5",
+      "output_chd_sha256": "fa0fc10519b75423cc84b65ba7e6d0097c29f7f2afb278f0abb838acdc2df4a8",
+      "output_chd_bytes": 863342936,
+      "output_identical_to_prior_runtime_validated_build": true,
+      "original_input_unchanged": true,
+      "chdman_verify_passed": true
+    },
+    {
+      "disc": 2,
+      "format": "KZRP2",
+      "source_track_sha256": "41ff8f50f2077c99cf297eb9690894da80407059f5aff92fa63f1a31d8ece680",
+      "target_track_sha256": "59264b619acc1d7f98576dfe0b3ace5c7b4b4923b47a35b8abea8cc3ae4b0ae6",
+      "source_crc32": "99dacab4",
+      "target_crc32": "00d870d3",
+      "patch_sha256": "5ab210504dfc68c1b4813d70b10b32d216c49057126b04342bca7e8918dd0593",
+      "patch_bytes": 777919,
+      "original_executable_lba": 548662,
+      "target_executable_lba": 45024,
+      "original_executable_bytes": 692224,
+      "target_executable_bytes": 1142592,
+      "copy_bytes": 665792,
+      "xor_source_bytes": 2359296,
+      "xor_nonzero_bytes": 1289075,
+      "new_extension_literal_bytes": 450368,
+      "sectors": 1697,
+      "independent_verification": {
+        "verified": true,
+        "independently_decoded_sectors": 1697,
+        "unchanged_raw_sectors": 502453,
+        "original_program_bytes_sourced_locally": 692224,
+        "literal_bytes_only_in_new_extension": 450368,
+        "original_program_literal_bytes": 0,
+        "original_ui_literal_bytes": 0,
+        "target_track_sha256": "59264b619acc1d7f98576dfe0b3ace5c7b4b4923b47a35b8abea8cc3ae4b0ae6"
+      },
+      "original_chd_sha256": "4e888d39ed8ee4733b8924070c0ed172c7056934058e860d286cb2fa5519a808",
+      "output_chd_sha256": "db9aa8bd1bd66c2fdcf970a076cfca59ddfc91f2941152a02b31eabd5e732e4d",
+      "output_chd_bytes": 905914996,
+      "output_identical_to_prior_runtime_validated_build": true,
+      "original_input_unchanged": true,
+      "chdman_verify_passed": true
+    }
+  ],
+  "negative_tests": {
+    "corrupt_package": {
+      "rejected": true,
+      "error": "InvalidDataException: 패치 SHA-256이 일치하지 않습니다."
+    },
+    "truncated_package": {
+      "rejected": true,
+      "error": "InvalidDataException: 패치 데이터가 잘렸습니다."
+    },
+    "out_of_range_reference": {
+      "rejected": true,
+      "error": "InvalidDataException: 원본 참조 범위 오류입니다."
+    },
+    "wrong_original": {
+      "rejected": true,
+      "error": "UserError: 이 패치에 맞는 원본 트랙이 아닙니다 (SHA-256 불일치)."
+    },
+    "input_unchanged": true,
+    "failed_output_cleaned": true
+  },
+  "editor_imports": [
+    {
+      "Disc": 1,
+      "Cues": 4611,
+      "Glyphs": 807,
+      "ExactRoundtrip": true,
+      "Warnings": 144
+    },
+    {
+      "Disc": 2,
+      "Cues": 4282,
+      "Glyphs": 752,
+      "ExactRoundtrip": true,
+      "Warnings": 78
+    }
+  ],
+  "embedded_resources": {
+    "KazeRegretDCKRPatcher.exe": {
+      "chdman.exe": {
+        "bytes": 2360320,
+        "sha256": "972cad9fc243ba8d393cd9bfe566af0740e9df543b628b076b99fe77b8d24d20"
+      },
+      "disc1.kzrp": {
+        "bytes": 951333,
+        "sha256": "8a4a57a5a502aa7885b925071725dc5d022e7993373dbfd4d3fe0df285220125"
+      },
+      "disc2.kzrp": {
+        "bytes": 777919,
+        "sha256": "5ab210504dfc68c1b4813d70b10b32d216c49057126b04342bca7e8918dd0593"
+      },
+      "LICENSES.txt": {
+        "bytes": 730721,
+        "sha256": "249df7848853447040fa620e772ead8d1d61f76906383e68852d7cf679cc875e"
+      }
+    },
+    "KazeSubtitleEditor.exe": {
+      "manifest.json": {
+        "bytes": 29362,
+        "sha256": "873962bc99e32de4241fd3bd0d83eab16091ecd97c0d13ce700661c3c02bffeb"
+      },
+      "glyphs.gz": {
+        "bytes": 2933473,
+        "sha256": "2b0facf65b13b6aea0a67de449e6688d7fbebaefddebdf4efc29b3bd0ec405f8"
+      },
+      "chdman.exe": {
+        "bytes": 2360320,
+        "sha256": "972cad9fc243ba8d393cd9bfe566af0740e9df543b628b076b99fe77b8d24d20"
+      },
+      "LICENSES.txt": {
+        "bytes": 730721,
+        "sha256": "249df7848853447040fa620e772ead8d1d61f76906383e68852d7cf679cc875e"
+      }
+    }
+  },
+  "patcher_sha256": "d1975bf10c682b725ad71706fb482908c993c597f722abbc441a80449e13b9dc",
+  "editor_sha256": "43c28483b5f7d76df7c637100a9b39afbda2f44734a78d2958d4e27345be37e1",
+  "prior_editor_runtime_validation": "Original 1.0 behavior: one edited cue per disc reimported exactly, all other 4610/4281 cues and non-executable sectors preserved, both edits displayed in Flycast. In 1.0.1, Core.cs is unchanged and all 8893 cues were reimported/packed without edits.",
+  "limitations": [
+    "XOR game-derived changes and translation still raise separate derivative-work rights questions.",
+    "GitHub unreachable objects/caches and downloaded copies are not guaranteed purged."
+  ]
+}
